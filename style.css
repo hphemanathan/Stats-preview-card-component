@@ -1,2 +1,123 @@
 /* font-family: "Inter", sans-serif;
 font-family: "Lexend Deca", sans-serif; */
+
+/* ----------------------------------------- */
+/* CSS Reset */
+/* ----------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* ----------------------------------------- */
+/* Custom properties */
+/* ----------------------------------------- */
+
+:root {
+  /* colors */
+
+  --bg-primary: hsl(233, 47%, 7%);
+  --bg-card: hsl(244, 38%, 16%);
+  --text-accent: hsl(277, 64%, 61%);
+  --text-heading: hsl(0, 0%, 100%);
+  --text-white-dark: hsla(0, 0%, 100%, 0.75);
+  --text-white-darker: hsla(0, 0%, 100%, 0.6);
+
+  /* Margin */
+
+  --mar-t-5_5: 5.5rem;
+}
+
+/* ----------------------------------------- */
+/* General Styles */
+/* ----------------------------------------- */
+
+body {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: bisque;
+}
+
+.container {
+  background-color: var(--bg-card);
+  width: min(85%);
+  margin-top: var(--mar-t-5_5);
+
+  @media (min-width: 37.5em) {
+  }
+}
+
+.footer {
+  margin-top: auto;
+}
