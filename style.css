@@ -113,11 +113,17 @@ body {
   background-color: var(--bg-card);
   width: min(85%);
   margin-top: var(--mar-t-5_5);
+  border-radius: 0.5rem;
+  overflow: hidden;
 
   @media (min-width: 37.5em) {
   }
 }
 
+.img-wrapper {
+  background-color: var(--text-accent);
+  background-blend-mode: color;
+}
 .footer {
   margin-top: auto;
 }
