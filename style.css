@@ -115,15 +115,24 @@ body {
   margin-top: var(--mar-t-5_5);
   border-radius: 0.5rem;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 
   @media (min-width: 37.5em) {
   }
 }
 
 .img-wrapper {
-  background-color: var(--text-accent);
-  background-blend-mode: color;
+  position: relative;
 }
 .footer {
   margin-top: auto;
+}
+
+.img-wrapper::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--text-accent);
+  mix-blend-mode: multiply;
 }
