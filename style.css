@@ -1,0 +1,204 @@
+/* font-family: "Inter", sans-serif;
+font-family: "Lexend Deca", sans-serif; */
+
+/* ----------------------------------------- */
+/* CSS Reset */
+/* ----------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* ----------------------------------------- */
+/* Custom properties */
+/* ----------------------------------------- */
+
+:root {
+  /* colors */
+
+  --bg-primary: hsl(233, 47%, 7%);
+  --bg-card: hsl(244, 38%, 16%);
+  --text-accent: hsl(277, 64%, 61%);
+  --text-heading: hsl(0, 0%, 100%);
+  --text-white-dark: hsla(0, 0%, 100%, 0.75);
+  --text-white-darker: hsla(0, 0%, 100%, 0.6);
+
+  /* Margin */
+
+  --mar-t-5_5: 5.5rem;
+  --mar-b-3: 3rem;
+  --mar-b-2: 2rem;
+  --mar-b-2_5: 2.5rem;
+  --mar-b-1_5: 1.5rem;
+  --mar-b-1: 1rem;
+  --mar-rl-2: 2rem;
+}
+
+/* ----------------------------------------- */
+/* General Styles */
+/* ----------------------------------------- */
+
+body {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  background-color: var(--bg-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: bisque;
+}
+
+.container {
+  background-color: var(--bg-card);
+  width: min(90%, 39rem);
+  margin-top: var(--mar-t-5_5);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  text-align: center;
+
+  @media (min-width: 75em) {
+    display: flex;
+    width: min(90%, 70rem);
+  }
+}
+
+.img-wrapper {
+  position: relative;
+  margin-bottom: var(--mar-b-3);
+
+  @media (min-width: 75em) {
+    width: 100%;
+    order: 2;
+  }
+}
+
+.section-text {
+  @media (min-width: 75rem) {
+    width: 100%;
+  }
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.img-wrapper::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: var(--text-accent);
+  mix-blend-mode: multiply;
+}
+
+.heading-primary {
+  color: var(--text-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin: var(--mar-rl-2);
+  margin-bottom: var(--mar-b-1);
+  text-wrap: wrap;
+}
+
+.heading-accent {
+  color: var(--text-accent);
+}
+
+.about-text {
+  color: var(--text-white-dark);
+  margin: var(--mar-rl-2);
+  margin-bottom: var(--mar-b-2_5);
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: var(--mar-b-2);
+}
+
+.list-item {
+  color: var(--text-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: var(--mar-b-1_5);
+}
+
+.list-item--modifier {
+  display: block;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-white-darker);
+  font-weight: 400;
+}
+
+.footer {
+  margin-top: auto;
+}
