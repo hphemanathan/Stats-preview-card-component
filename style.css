@@ -95,9 +95,11 @@ h4 {
   --mar-b-3: 3rem;
   --mar-b-2: 2rem;
   --mar-b-2_5: 2.5rem;
+  --mar-b-4_5: 4.5rem;
   --mar-b-1_5: 1.5rem;
   --mar-b-1: 1rem;
   --mar-rl-2: 2rem;
+  --mar-4_5: 4.5rem;
 }
 
 /* ----------------------------------------- */
@@ -112,7 +114,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: bisque;
 }
 
 .container {
@@ -126,6 +127,7 @@ body {
   @media (min-width: 75em) {
     display: flex;
     width: min(90%, 70rem);
+    margin-top: auto;
   }
 }
 
@@ -136,17 +138,36 @@ body {
   @media (min-width: 75em) {
     width: 100%;
     order: 2;
+    margin-bottom: 0;
+  }
+}
+
+.hero-img--mobile {
+  width: 100%;
+  display: block;
+  @media (min-width: 75em) {
+    display: none;
+  }
+}
+
+.hero-img--desktop {
+  display: none;
+
+  @media (min-width: 75em) {
+    display: block;
+    width: 100%;
+    height: 100%;
   }
 }
 
 .section-text {
-  @media (min-width: 75rem) {
-    width: 100%;
+  @media (min-width: 75em) {
+    width: 75%;
+    margin: var(--mar-4_5);
+    margin-right: 7rem;
+    text-align: left;
+    margin-bottom: 0;
   }
-}
-
-.hero-img {
-  width: 100%;
 }
 
 .img-wrapper::after {
@@ -165,6 +186,13 @@ body {
   margin: var(--mar-rl-2);
   margin-bottom: var(--mar-b-1);
   text-wrap: wrap;
+
+  @media (min-width: 75em) {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    margin: 0;
+    margin-bottom: var(--mar-b-1_5);
+  }
 }
 
 .heading-accent {
@@ -175,18 +203,30 @@ body {
   color: var(--text-white-dark);
   margin: var(--mar-rl-2);
   margin-bottom: var(--mar-b-2_5);
+
+  @media (min-width: 75em) {
+    margin: 0;
+    margin-bottom: var(--mar-b-4_5);
+  }
 }
 
 .list {
   list-style-type: none;
   padding: 0;
   margin-bottom: var(--mar-b-2);
+
+  @media (min-width: 75em) {
+    display: flex;
+    margin-top: auto;
+    font-size: 1.5rem;
+  }
 }
 
 .list-item {
   color: var(--text-heading);
   font-size: 1.5rem;
   font-weight: 700;
+  margin-right: 4rem;
   margin-bottom: var(--mar-b-1_5);
 }
 
@@ -201,4 +241,14 @@ body {
 
 .footer {
   margin-top: auto;
+  color: white;
+}
+
+footer > a {
+  color: white;
+}
+
+footer > a:hover,
+footer > a:active {
+  cursor: pointer;
 }
